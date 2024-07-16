@@ -11,10 +11,10 @@
   ],
   "scripts": {
     "clean": "rm -f littleowle-hyper-express-instance-*.tgz",
-    "see-pack": "tar tvf $(pnpm pack)",
-    "build": "pnpm run clean",
+    "see-pack": "tar tvf $npm_package_name-$npm_package_version.tgz",
+    "build": "pnpm run clean && pnpm pack",
     "tests": "node --test-reporter=spec --test test/setup.js",
-    "test": "pnpm run tests && pnpm run build",
+    "test": "pnpm run tests && pnpm run build && pnpm run see-pack",
     "prepublish": "pnpm test",
     "version:patch": "pnpx changelogen@latest --bump --patch",
     "version:minor": "pnpx changelogen@latest --bump --minor",
