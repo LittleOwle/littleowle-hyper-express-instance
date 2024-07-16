@@ -11,11 +11,18 @@
 !.github/CODE_OF_CONDUCT.md
 !.github/SECURITY.md
 
+!.husky/
+!.husky/**
+!commitlint.config.js
+
 !package.json
 !tsconfig.json
 
 !src/
 !src/**
+
+!test/
+!test/setup.js
 
 !types.d.ts
 
