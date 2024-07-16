@@ -9,6 +9,11 @@
 !.github/FUNDING.yml
 !.github/release.yml
 
+!package.json
+
+!src/
+!src/**
+
 !LICENSE
 !AUTHORS
 
