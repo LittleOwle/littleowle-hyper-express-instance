@@ -8,11 +8,16 @@
 !.github/
 !.github/FUNDING.yml
 !.github/release.yml
+!.github/CODE_OF_CONDUCT.md
+!.github/SECURITY.md
 
 !package.json
+!tsconfig.json
 
 !src/
 !src/**
+
+!types.d.ts
 
 !LICENSE
 !AUTHORS
