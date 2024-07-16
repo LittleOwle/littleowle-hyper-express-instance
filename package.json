@@ -1,6 +1,6 @@
 {
   "name": "littleowle-hyper-express-instance",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "littleowle-hyper-express-instance",
   "main": "src/main.js",
   "private": true,
