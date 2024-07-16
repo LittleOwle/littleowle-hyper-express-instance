@@ -9,7 +9,7 @@
 const pkgJson = require("../package.json");
 
 /**
- * @ignore
+ * @private
  */
 const {ServerInstance} = require("./serverInstance");
 /**
@@ -34,7 +34,6 @@ const {name, version} = internalStore.app;
  * @param {Object} data
  * @param {Object} data.settings
  * @param {Object} [data.options]
- * @returns {ServerInstance}
  */
 const getServerInstance = (data = {}) => {
     const {settings = {}, options = {}} = data;
@@ -45,5 +44,8 @@ const getServerInstance = (data = {}) => {
  */
 module.exports = Object.freeze({
     name, version,
+    /**
+     * @inheritDoc
+     */
     instance: getServerInstance
 });
