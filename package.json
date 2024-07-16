@@ -1,0 +1,49 @@
+{
+  "name": "littleowle-hyper-express-instance",
+  "version": "1.0.1",
+  "description": "littleowle-hyper-express-instance",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "clean": "rm littleowle-hyper-express-instance-*.tgz",
+    "see-pack": "tar tvf $(pnpm pack)",
+    "build": "pnpm run clean && pnpm run see-pack",
+    "tests": "node --test-reporter=spec --test test/setup.js",
+    "test": "pnpm run tests && pnpm run build",
+    "prepublish": "pnpm test",
+    "version:patch": "pnpx changelogen@latest --bump --patch",
+    "version:minor": "pnpx changelogen@latest --bump --minor",
+    "version:major": "pnpx changelogen@latest --bump --major"
+  },
+  "homepage": "https://littleowle.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LittleOwle/littleowle-hyper-express-instance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LittleOwle/littleowle-hyper-express-instance/issues"
+  },
+  "author": "Jamil Serviços <jamilservicos@gmail.com> (https://github.com/jamilservicos)",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/jamilservicos"
+    },
+    {
+      "type": "patreon",
+      "url": "https://patreon.com/jamilservices"
+    }
+  ],
+  "license": "AGPL-3.0-or-later",
+  "engines": {
+    "node": ">=20.15.x"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10"
+  },
+  "dependencies": {
+    "@jamilservices/sb-module-crypto-back": "^1.0.2",
+    "hyper-express": "^6.16.4"
+  },
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
+}
