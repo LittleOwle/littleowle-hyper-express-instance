@@ -4,8 +4,13 @@
   "description": "littleowle-hyper-express-instance",
   "main": "src/main.js",
   "private": true,
+  "files": [
+    "AUTHORS",
+    "src",
+    "types.d.ts"
+  ],
   "scripts": {
-    "clean": "rm littleowle-hyper-express-instance-*.tgz",
+    "clean": "rm -f littleowle-hyper-express-instance-*.tgz",
     "see-pack": "tar tvf $(pnpm pack)",
     "build": "pnpm run clean && pnpm run see-pack",
     "tests": "node --test-reporter=spec --test test/setup.js",
