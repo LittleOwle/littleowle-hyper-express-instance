@@ -12,13 +12,14 @@
   "scripts": {
     "clean": "rm -f littleowle-hyper-express-instance-*.tgz",
     "see-pack": "tar tvf $(pnpm pack)",
-    "build": "pnpm run clean && pnpm run see-pack",
+    "build": "pnpm run clean",
     "tests": "node --test-reporter=spec --test test/setup.js",
     "test": "pnpm run tests && pnpm run build",
     "prepublish": "pnpm test",
     "version:patch": "pnpx changelogen@latest --bump --patch",
     "version:minor": "pnpx changelogen@latest --bump --minor",
-    "version:major": "pnpx changelogen@latest --bump --major"
+    "version:major": "pnpx changelogen@latest --bump --major",
+    "prepare": "husky install"
   },
   "homepage": "https://littleowle.github.io/",
   "repository": {
@@ -44,7 +45,10 @@
     "node": ">=20.15.x"
   },
   "devDependencies": {
-    "@types/node": "^20.14.10"
+    "@types/node": "^20.14.10",
+    "commitlint": "^19.3.0",
+    "commitlint-config-gitmoji": "^2.3.1",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@jamilservices/sb-module-crypto-back": "^1.0.2",
